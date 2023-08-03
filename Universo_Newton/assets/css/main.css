@@ -893,7 +893,10 @@ ol {
     width: 600px;
   }
 }
-
+.video2{
+  width: 100%;      /* Establece el ancho del iframe al 100% de su contenedor */
+  height: 500px;
+}
 .bg-gray {
   background-color: #F4F7FA !important;
 }
@@ -2207,27 +2210,30 @@ ol {
   width: 90%;
 }
 
-
-
 .video-container {
-  width: 250px; /* Ajusta el tamaño del círculo según tus necesidades */
-  height: 250px;
-  border-radius: 30%; /* Hace que el contenedor sea circular */
-  overflow: hidden; /* Evita que el video se salga del círculo */
-  position: absolute;
-  top:160px ;
-  left: -100px;
+  position: relative;
+  width: 100%;
 }
 
-#video {
-  width: 100%; /* Ajusta el tamaño del video al círculo */
-  height: 100%;
+.video-container iframe {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  border-radius: 50%; /* Centra el video en el círculo */
+  top: 90px;
+  left: 20%;
+  width: 45%;
+  height: 65%;
+  background-color: #8a7860; /* Color similar a la madera */
+  border: 10px solid #8b4513; /* Borde de aspecto similar a la madera oscura */
+  padding: 3px;
+  border-radius: 5%; 
 }
+.video-container img{
+  position: relative;
+  width: 25%;
+  height: 25%;
+  left:65% ;
+  top: -80px;
+}
+
 
 /*======================================
     Domain Search CSS

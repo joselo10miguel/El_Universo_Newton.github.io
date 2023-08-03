@@ -33,8 +33,20 @@
 
 
   <link rel="stylesheet" href="assets/estilo/css-circular-prog-bar.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+ <!--css -->
+ <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+ <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
+ <link rel="stylesheet" href="assets/css/animate.css" />
+ <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+ <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+ <link rel="stylesheet" href="assets/css/main.css" />
+ 
+<link rel="stylesheet" href="assets/estilo/css-circular-prog-bar.css">
+ <link rel="stylesheet" href="assets/css/main.css" />
 
+
+ <link rel="stylesheet" href="assets/estilo/css-circular-prog-bar.css">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
@@ -43,35 +55,57 @@
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="index.html">
-            <span>
-              El Universo de Newton
-            </span>
+           
+                  <h4 class="Logo">El Universo de Newton</h4>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
           </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html"> Inicio<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="index.html#leyes"> Leyes de Newton </a>
-                </li>
-
-                <li class="nav-item ">
-                  <a class="nav-link" href="simuladorFuncional.html"> Simulacion </a>
-                </li>
-
-                
-              </ul>
-            </div>
-        </nav>
+          <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+            <ul id="nav" class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a href="index.html" class="active" aria-label="Toggle navigation">Inicio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
+                      data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">Contenido Teórico </a>
+                  <ul class="sub-menu collapse" id="submenu-1-1">
+                      <li class="nav-item"><a href="leyUno.html">¿Qué es la Primera Ley?</a></li>
+                      <li class="nav-item"><a href="LeyDos.html">¿Qué es laSegunda Ley?</a></li>
+                      <li class="nav-item"><a href="LeyTres.html">¿Qué es laTercera Ley?</a></li>
+                      
+                  </ul>
+              </li>
+             
+              <li class="nav-item">
+                  <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
+                      data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">Ejercicios</a>
+                  <ul class="sub-menu collapse" id="submenu-1-2">
+                      <li class="nav-item"><a href="Prueba_leyUno.html">Primera Ley</a></li>
+                      <li class="nav-item"><a href="Prueba_LeyDos.html">Segunda Ley</a>
+                      </li>
+                      <li class="nav-item"><a href="prueba_LeyTres.html">Tercera Ley</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                <a href="simuladorFuncional.html" aria-label="Toggle navigation">simulador</a>
+            </li>
+              <li class="nav-item">
+                  <a href="https://quizizz.com/embed/quiz/64bd99954a1e9b0007918844" aria-label="Toggle navigation">Evaluacion Final</a>
+              </li>
+              
+          </ul>
+          </div> <!-- navbar collapse -->
+        
+      </nav>
       </div>
     </header>
     <section class="hero_section ">
@@ -102,11 +136,7 @@
         
       </div >
 
-      <div class="quizis1">
-        <a href=" https://quizizz.com/embed/quiz/64bda93fb3d7900007264feb" class="call_to-btn btn btn-info">
-          Realizar Quizis
-        </a>
-      </div>
+      
       <div id="evaluacion" class="evaluacionC_1">
           <div >
             <h1 class="text-primary"> <span>Evaluación de Conocimientos</span> </h1>
@@ -280,8 +310,8 @@
                         Utilizando la fórmula de aceleración: a = (v - v₀) / t<br>
                         a = (0 - 16.67) / 5 = -3.334 m/s²<<br>
                         La aceleración es negativa porque se opone al movimiento del automóvil.<br>
-                        Ahora podemos calcular la fuerza de frenado utilizando la segunda ley de Newton: Fuerza (F) = masa (m) x aceleración (a)<br>
-                        F = 1200 kg x (-3.334 m/s²) = -4000 N<br>
+                        Ahora podemos calcular la fuerza de frenado utilizando la segunda ley de Newton: Fuerza (F_neta) = masa (m) x aceleración (a)<br>
+                        F_neta = 1200 kg x (-3.334 m/s²) = -4000 N<br>
                         Por lo tanto, la fuerza de frenado que actúa sobre el automóvil es -4000 N.`;
                       }
                     } else {
@@ -362,7 +392,7 @@
                     texto3: "10000 N",
                   },
                 };
-            
+             
                 function comprobarRespuesta3() {
                   const opcionCorrecta3 = "opcionC3"; // La opción correcta es la cuarta opción (-50000 N)
             
@@ -386,7 +416,7 @@
                       Para determinar la fuerza neta, podemos utilizar la Segunda Ley de Newton (F = m * a).<br>
                       En este caso, conocemos la masa del satélite (500 kg) y la aceleración (100 m/s²),<br> 
                       por lo que podemos calcular la fuerza neta:<br>
-                      F = (500 kg) * (-100 m/s²) = -50000 N<br>
+                      F_neta = (500 kg) * (-100 m/s²) = -50000 N<br>
                       La fuerza neta experimentada por el satélite durante el impacto es de -50000 N,<br> 
                       donde el signo negativo indica que actúa en la dirección opuesta a la velocidad original del satélite.`;
                     }
@@ -411,8 +441,28 @@
     <!-- end determine section -->
 
   </div>
+  <div class="why_detail-box">
+    <h3 class="text-danger" style="position: relative;left: 10%;width: 70%;">
+      Realiza el siguiente Quizizz: 
+    </h3><br>
+   <div>
+  <div class="">
+    <div style="width:90%;display:flex;flex-direction:column;gap:8px;min-height:635px;position: relative;left: 5%;"><iframe src="https://quizizz.com/embed/quiz/64bda93fb3d7900007264feb" title="Lección de la Primera Ley de Newton - Quizizz" style="flex:1;" frameBorder="0" allowfullscreen></iframe></div>
+  </div><br><br><br>
 
 
+  <h3 class="text-danger" style="position: relative;left: 10%;width: 70%;">
+    Simulador:  
+  </h3><br>
+
+  <iframe style="position: relative;left: 5%;" src="https://www.vascak.cz/data/android/physicsatschool/template.php?f=mech_newton1&l=es"
+  width="90%"
+  height="600"
+  
+  allowfullscreen>
+  
+</iframe>
+<p>Pausa el bloqueador de anuncios para que funcione correctamente el simulador!!!</p>
   <!-- client section -->
   <section class="client_section layout_padding">
     <h2 class="text-danger">
@@ -468,7 +518,7 @@
   <!-- end client section -->
 
 
-  
+ 
   
 
   <!-- footer section -->
